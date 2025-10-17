@@ -10,54 +10,42 @@ public class LoanCalculatorTest_Qodo {
     @Test
     @DisplayName("Should throw IllegalArgumentException when principal is negative")
     public void testCalculateLumpSumPayment_NegativePrincipal() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(-1000.0, 5.0, 10, 12);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(-1000.0, 5.0, 10, 12));
     }
 
     // Test for invalid inputs - negative interest rate
     @Test
     @DisplayName("Should throw IllegalArgumentException when interest rate is negative")
     public void testCalculateLumpSumPayment_NegativeInterestRate() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(1000.0, -5.0, 10, 12);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(1000.0, -5.0, 10, 12));
     }
 
     // Test for invalid inputs - zero years
     @Test
     @DisplayName("Should throw IllegalArgumentException when years is zero")
     public void testCalculateLumpSumPayment_ZeroYears() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, 0, 12);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, 0, 12));
     }
 
     // Test for invalid inputs - negative years
     @Test
     @DisplayName("Should throw IllegalArgumentException when years is negative")
     public void testCalculateLumpSumPayment_NegativeYears() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, -5, 12);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, -5, 12));
     }
 
     // Test for invalid inputs - zero compound periods
     @Test
     @DisplayName("Should throw IllegalArgumentException when compound periods is zero")
     public void testCalculateLumpSumPayment_ZeroCompoundPeriods() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, 10, 0);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, 10, 0));
     }
 
     // Test for invalid inputs - negative compound periods
     @Test
     @DisplayName("Should throw IllegalArgumentException when compound periods is negative")
     public void testCalculateLumpSumPayment_NegativeCompoundPeriods() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, 10, -1);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(1000.0, 5.0, 10, -1));
     }
 
     // Test for zero principal - special case

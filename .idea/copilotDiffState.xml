@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/.idea/vcs.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/.idea/vcs.xml" />
+              <option name="originalContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;project version=&quot;4&quot;&gt;&#10;  &lt;component name=&quot;VcsDirectoryMappings&quot;&gt;&#10;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD&#10;    &lt;mapping directory=&quot;&quot; vcs=&quot;Git&quot; /&gt;&#10;=======&#10;    &lt;mapping directory=&quot;$PROJECT_DIR$&quot; vcs=&quot;Git&quot; /&gt;&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 1de24eff68b37b27776fd1fa07b34b5ebf49a930&#10;  &lt;/component&gt;&#10;&lt;/project&gt;" />
+              <option name="updatedContent" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;project version=&quot;4&quot;&gt;&#13;&#10;  &lt;component name=&quot;VcsDirectoryMappings&quot;&gt;&#13;&#10;    &lt;mapping directory=&quot;&quot; vcs=&quot;Git&quot; /&gt;&#13;&#10;  &lt;/component&gt;&#13;&#10;&lt;/project&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -52,32 +52,29 @@ class LoanCalculatorTest {
     @Test
     @DisplayName("TC09 (BVA): Kiểm thử principal âm")
     void test_Invalid_NegativePrincipal() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(-0.01, 10.0, 5, 1);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(-0.01, 10.0, 5, 1));
     }
 
     @Test
     @DisplayName("TC11 (BVA): Kiểm thử lãi suất âm")
     void test_Invalid_NegativeInterestRate() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(50000, -0.01, 10, 1);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(50000, -0.01, 10, 1));
     }
 
     @Test
     @DisplayName("TC13 (BVA): Kiểm thử số năm = 0")
     void test_Invalid_ZeroYears() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(10000, 5.0, 0, 1);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(10000, 5.0, 0, 1));
     }
 
     @Test
     @DisplayName("TC15 (BVA): Kiểm thử số lần ghép lãi = 0")
     void test_Invalid_ZeroCompoundPeriod() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            LoanCalculator.calculateLumpSumPayment(10000, 5.0, 5, 0);
-        });
+        assertThrows(IllegalArgumentException.class, () -> LoanCalculator.calculateLumpSumPayment(10000, 5.0, 5, 0));
+    }
+
+    @Test
+    void testConstructorCoverage() {
+        new LoanCalculator();
     }
 }
