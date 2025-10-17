@@ -8,6 +8,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LoanCalculatorTest {
 
+    /**
+     * Tính toán tổng số tiền (cả gốc và lãi) phải trả một lần vào cuối kỳ cho khoản vay trả sau.
+     * Phép tính này dựa trên công thức lãi kép.
+     *
+     * @param principal            Số tiền vay ban đầu (phải là số không âm).
+     * @param annualInterestRate   Lãi suất hàng năm dưới dạng phần trăm (ví dụ: 6 cho 6%, phải là số không âm).
+     * @param years                Thời hạn vay tính bằng năm (phải lớn hơn 0).
+     * @param compoundPeriodPerYear Số lần ghép lãi trong một năm (ví dụ: 1 cho hàng năm, 12 cho hàng tháng. Phải lớn hơn hoặc bằng 1).
+     * @return Tổng số tiền phải trả khi đáo hạn, đã được làm tròn đến 2 chữ số thập phân.
+     * @throws IllegalArgumentException nếu bất kỳ tham số đầu vào nào không hợp lệ.
+     */
+
     private static final double DELTA = 0.001; // Sai số cho phép khi so sánh số thực
 
     @Test
