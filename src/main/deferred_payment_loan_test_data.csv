@@ -1,0 +1,36 @@
+test_case_id,description,principal,annual_interest_rate,years,compound_period_per_year,expected_result,result_web,test_type,notes
+TC001,Valid case - Annual compounding,100000,6,10,1,179084.77,179084.77,Valid,Example from requirement
+TC002,Valid case - Monthly compounding,100000,6,10,12,181939.67,181939.67,Valid,Higher due to frequent compounding
+TC003,Valid case - Quarterly compounding,100000,6,10,4,181023.91,181023.91,Valid,Between annual and monthly
+TC004,Valid case - Daily compounding,100000,6,10,365,182208.88,182208.88,Valid,Maximum compounding frequency
+TC005,Edge case - Zero principal,0,6,10,1,0.00,0.00,Valid,Principal = 0
+TC006,Edge case - Zero interest rate,100000,0,10,1,100000.00,100000.00,Valid,No interest
+TC007,Edge case - 1 year term,100000,6,1,1,106000.00,106000.00,Valid,Minimum years
+TC008,Edge case - High interest rate,100000,50,5,1,759375.00,759375.00,Valid,High interest scenario
+TC009,BVA - Minimum principal,0.01,6,10,1,0.02,0.02,Valid,Boundary value
+TC010,BVA - Low principal,1,6,10,1,1.79,1.79,Valid,Small amount
+TC011,BVA - Medium principal,50000,6,10,1,89542.39,89542.39,Valid,Half of standard
+TC012,BVA - Large principal,500000,6,10,1,895423.85,895423.85,Valid,Large amount
+TC013,BVA - Very low interest,100000,0.01,10,1,100010.00,100010.00,Valid,Minimal interest
+TC014,BVA - Low interest,100000,1,10,1,110462.21,110462.21,Valid,Low interest rate
+TC015,BVA - Medium interest,100000,12,10,1,310584.48,310584.48,Valid,Medium interest
+TC016,BVA - High interest,100000,25,10,1,931322.57,931322.57,Valid,High interest
+TC017,BVA - Very high interest,100000,99.99,10,1,1048475697.69,1048475697.69,Valid,Maximum interest
+TC018,BVA - Short term,100000,6,2,1,112360.00,112360.00,Valid,2 years
+TC019,BVA - Medium term,100000,6,15,1,241171.48,241171.48,Valid,15 years
+TC020,BVA - Long term,100000,6,30,1,574349.12,574349.12,Valid,30 years
+TC021,BVA - Very long term,100000,6,50,1,1842700.25,1842700.25,Valid,50 years
+TC022,BVA - Semi-annual compounding,100000,6,10,2,180611.23,180611.23,Valid,n=2
+TC023,BVA - Weekly compounding,100000,6,10,52,182194.00,182194.00,Valid,n=52
+TC024,Complex case 1,75000,8.5,7,4,135063.89,135063.89,Valid,Mixed values
+TC025,Complex case 2,250000,4.25,20,12,575621.33,575621.33,Valid,Long term low interest
+TC026,Complex case 3,15000,15,5,1,30170.36,30170.36,Valid,High interest short term
+TC027,Negative principal,-100000,6,10,1,Error,Error,Invalid,EP - Invalid principal
+TC028,Negative interest rate,100000,-5,10,1,Error,Error,Invalid,EP - Invalid interest
+TC029,Zero years,100000,6,0,1,Error,Error,Invalid,BVA - Invalid years
+TC030,Negative years,100000,6,-5,1,Error,Error,Invalid,EP - Invalid years
+TC031,Zero compound period,100000,6,10,0,Error,Error,Invalid,BVA - Invalid compound
+TC032,Negative compound period,100000,6,10,-1,Error,Error,Invalid,EP - Invalid compound
+TC033,Interest rate over 100,100000,150,10,1,Error,Error,Invalid,EP - Invalid interest
+TC034,Very small principal,0.001,6,10,1,0.00,0.00,Valid,Rounding test
+TC035,Fractional compound period,100000,6,10,12.5,Error,Error,Invalid,Non-integer compound period
