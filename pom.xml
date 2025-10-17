@@ -6,4 +6,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - SWT_LAB2</name>
   <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.9.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>
